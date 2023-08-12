@@ -1,0 +1,96 @@
+@keyframes carRight {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 120%;
+    }
+}
+
+.car {
+    position: fixed;
+    bottom: 0px;
+    left: -200px;
+    animation: carRight 10s 0s infinite linear;
+}
+
+@keyframes truckLeft {
+    0% {
+        right: -200px;
+    }
+
+    100% {
+        right: 120%;
+    }
+}
+
+.truck {
+    height: 100px;
+    width: 200px;
+    position: fixed;
+    background-color: aqua;
+    bottom: 300px;
+    right: -200px;
+    animation: truckLeft 10s 0s infinite linear;
+}
+
+@keyframes wheelRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wheel-outer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wheel-outer span {
+    display: inline-block;
+    margin-top: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    animation: wheelRotate 3s 0s infinite linear;
+}
+
+.ambulance{
+    position: fixed;
+    bottom: 500px;
+    left: -200px;
+    animation: carRight 10s 0s infinite linear; 
+}
+
+/* circle car */
+
+@keyframes circleRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    margin-left: 50%;
+    top:100px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    overflow: hidden; 
+    position: relative;
+    animation: circleRotate 5s linear infinite;
+  }
+  
+  .circle img {
+    object-fit: contain; /* Ensure the image covers the entire circle */
+    animation: circleRotate 5s linear infinite; /* Apply the same animation as the container to rotate the image */
+  }

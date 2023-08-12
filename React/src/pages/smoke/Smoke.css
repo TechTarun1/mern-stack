@@ -1,0 +1,61 @@
+@keyframes smoke-animation {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(2);
+    }
+}
+
+h1 span {
+    display: inline-block;
+    animation: smoke-animation 3s linear infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: aqua;
+        left:0;
+        top:0
+    }
+
+    25% {
+        background-color: red;
+        left:300px;
+        top:0
+    }
+
+    50% {
+        background-color: green;
+        left:300px;
+        top:300px
+    }
+
+    75% {
+        background-color: yellow;
+        left:0;
+        top:300px
+    }
+
+    100% {
+        background-color: aqua;
+    }
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    position: relative;
+    /* animation-duration: 5s;
+    animation-name: colorChange; */
+    /* animation-delay: 3s or linear; */
+    /* animation-iteration-count: infinite; */
+    animation: colorChange 5s 0s infinite linear;
+}
